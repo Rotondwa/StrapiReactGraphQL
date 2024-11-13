@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useQuery, gql } from '@apollo/client';
+import ReactMarkdown from 'react-markdown';
 
 // GraphQL query to get a review by documentId
 export const GET_REVIEW = gql`
