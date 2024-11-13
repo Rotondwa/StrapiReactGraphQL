@@ -26,7 +26,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/api/details/:id" element={<ReviewDetails />} />
-            <Route path="/category/:id" element={<Category />} />
+            <Route path="/api/category/:id" element={<Category />} />
             <Route path="*" element={<p>Page not found!</p>} />
           </Routes>
         </div>

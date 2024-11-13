@@ -16,6 +16,7 @@ export const GET_REVIEW = gql`
 
 
 export default function ReviewDetails() {
+ 
   const { id } = useParams(); // Get the documentId from the URL parameters
   const { loading, error, data } = useQuery(GET_REVIEW, {
     variables: {
