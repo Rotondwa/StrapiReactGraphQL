@@ -19,7 +19,7 @@ export default function Homepage() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading reviews: {error.message}</p>;
 
-  console.log('Fetched Reviews:', data);
+  console.log('All Fetched Reviews:', data);
 
   return (
     <div>
