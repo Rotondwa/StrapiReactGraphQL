@@ -9,7 +9,11 @@ export const GET_REVIEW = gql`
       title
       body
       rating
-      documentId
+      documentId,
+      categories{
+          Name
+          documentId
+        }
     }
   }
 `;
@@ -28,12 +32,15 @@ export default function ReviewDetails() {
   if (error) return <p>Error loading review: {error.message}</p>;
 
   // Destructure the review data from the response
-  const { title, body, rating } = data.review;
+  const { title, body, rating, categories } = data.review;
 
   return (
     <div className="review-card">
       <div className="rating">{rating}</div>
       <h2>{title}</h2>
+      <div>
+             <small>Categories: {categories.map(cat => cat.Name).join(', ')}</small>
+          </div>
       <div className="body">
         {/* Render body content if available */}
         {body && body.map((block, index) => (
